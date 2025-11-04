@@ -1,0 +1,4 @@
+.env
+bundle_psionic/
+__pycache__/
+venv/
