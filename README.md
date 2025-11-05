@@ -18,7 +18,7 @@ Bot ini menggunakan arsitektur multi-komponen yang matang untuk mencapai tujuan 
 
 Sistem ini dibagi menjadi dua alur kerja utama: Ingesti Data (Offline) dan Pemrosesan Kueri (Online).
 
-### 1. Alur Ingesti Data (Offline)
+### 1. Alur Pengambilan Data
 
 Data (buku dalam format PDF) tidak diproses secara real-time. Data tersebut harus diindeks terlebih dahulu menggunakan pipeline ingesti dari `Chunking_(v2).ipynb`.
 
@@ -28,7 +28,7 @@ Data (buku dalam format PDF) tidak diproses secara real-time. Data tersebut haru
 4.  **Embedding**: Setiap potongan teks diubah menjadi vektor numerik menggunakan model embedding Google (misalnya, `models/text-embedding-004`).
 5.  **Penyimpanan**: Vektor dan metadata (judul buku, halaman, dll.) disimpan ke dalam database vektor **ChromaDB** yang persisten di `bundle_psionic/vectorstore/`.
 
-### 2. Alur Pemrosesan Kueri (Online/Real-time)
+### 2. Alur Pemrosesan Kueri
 
 Ini adalah *pipeline* utama yang dijalankan oleh `AgentBrain` setiap kali pengguna mengajukan pertanyaan.
 
@@ -174,9 +174,3 @@ Proyek ini dilengkapi dengan rangkaian unit test untuk memvalidasi fungsionalita
 * `test_guardrail.py`: Memverifikasi logika `quick_guardrail` (pengecekan rujukan).
 * `test_psionic_utils.py`: Menguji utilitas pemformatan dan pemotongan teks di `PsionicAgent`.
 * `test_session_manager.py`: Memvalidasi alur hidup (lifecycle) sesi (start, bump turn, end).
-
-## Demo
-
-Tampilan demo bot:
-
-![Psionic Bot Demo](https://raw.githubusercontent.com/nurrochman954/mental-health-chatbot/c93692da3894dad7695bf0ced359ca29f8f8bf67/demo-chatbot.gif)
