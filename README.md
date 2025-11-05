@@ -174,3 +174,14 @@ Proyek ini dilengkapi dengan rangkaian unit test untuk memvalidasi fungsionalita
 * `test_guardrail.py`: Memverifikasi logika `quick_guardrail` (pengecekan rujukan).
 * `test_psionic_utils.py`: Menguji utilitas pemformatan dan pemotongan teks di `PsionicAgent`.
 * `test_session_manager.py`: Memvalidasi alur hidup (lifecycle) sesi (start, bump turn, end).
+
+## Demo
+
+Tampilan demo interaksi:
+
+![Demo Agent 1](https://raw.github.com/nurrochman954/psionic-bot/7c40c39ca7395a45fd2ac143b79dd237116ee308/assets/agent1.png)
+
+![Demo Agent 2](https://raw.github.com/nurrochman954/psionic-bot/7c40c39ca7395a45fd2ac143b79dd237116ee308/assets/agent2.png)
+
+![Demo Agent 3](https://raw.github.com/nurrochman954/psionic-bot/7c40c39ca7395a45fd2ac143b79dd237116ee308/assets/agent3.png)
+
